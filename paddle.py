@@ -20,12 +20,15 @@ class Paddle(Turtle):
         self.ready_play = self.position()
 
     def reset_position(self):
+        """重置paddle到初始位置"""
         self.goto(self.ready_play)
 
     def up(self):
+        """使paddle向上移動一定距離"""
         self.goto(self.xcor(), self.ycor() + MOVING_DISTANCE)
 
     def down(self):
+        """使paddle向下移動一定距離"""
         self.goto(self.xcor(), self.ycor() - MOVING_DISTANCE)
 
 

@@ -33,6 +33,7 @@ class Scoreboard(Turtle):
         t.hideturtle()
 
     def score_update(self):
+        """根據雙方得分更新顯示分數"""
         self.clear()
         self.color("white")
         self.goto(P1_SCORE_POSITION)
@@ -41,6 +42,7 @@ class Scoreboard(Turtle):
         self.write(f"{self.p2_score}", align=ALIGN, font=FONT)
 
     def get_point(self, player):
+        """讓得分的玩家增加分數並且更新顯示分數"""
         if player == "P1":
             self.p1_score += 1
         else:
@@ -48,6 +50,7 @@ class Scoreboard(Turtle):
         self.score_update()
 
     def game_over(self, player_num):
+        """宣布遊戲結束，並公布贏家"""
         self.goto(0, 40)
         self.color("red")
         self.write(f"Winner", align=ALIGN, font=FONT)
@@ -58,6 +61,7 @@ class Scoreboard(Turtle):
         self.write(f"New Game?    Press \"y\"", align=ALIGN, font=('Chalkduster', 25, 'normal'))
 
     def new_game(self):
+        """重啟遊戲，將雙方分數歸0並且更新顯示計分板資訊"""
         self.p1_score = 0
         self.p2_score = 0
         self.score_update()

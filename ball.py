@@ -15,9 +15,11 @@ class Ball(Turtle):
         self.serve()
 
     def move(self):
+        """讓球持續移動"""
         self.fd(10)
 
     def hit_wall(self):
+        """判斷撞擊牆壁之後的反彈角度"""
         self.setheading(360 - self.heading())
 
     def hit_l_paddle(self, l_paddle_ycor):

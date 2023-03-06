@@ -12,13 +12,14 @@ SLEEP_TIME = 0.08
 
 
 def new_round():
-    """開啟新局"""
+    """開啟下一局"""
     ball.serve()
     player_1.reset_position()
     player_2.reset_position()
 
 
 def play_game():
+    """重新啟動遊戲"""
     # 循環中會調用的變數
     game_is_on = True
     num_of_hit_paddle = 0
